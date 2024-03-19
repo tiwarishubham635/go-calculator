@@ -2,7 +2,7 @@ package advanced_math
 
 import (
 	"errors"
-	"github.com/tiwarishubham635/go-calculator/v2/math"
+	"github.com/tiwarishubham635/go-calculator/v3/math"
 )
 
 func Inverse[number math.Number](num number) (number, error) {
