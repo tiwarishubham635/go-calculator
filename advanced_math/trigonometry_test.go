@@ -2,7 +2,7 @@ package advanced_math
 
 import (
 	"github.com/stretchr/testify/assert"
-	"github.com/tiwarishubham635/go-calculator/math"
+	"github.com/tiwarishubham635/go-calculator/v2/math"
 	"testing"
 )
 

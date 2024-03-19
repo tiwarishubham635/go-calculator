@@ -1,4 +1,4 @@
-module github.com/tiwarishubham635/go-calculator
+module github.com/tiwarishubham635/go-calculator/v2
 
 go 1.21.4
 
