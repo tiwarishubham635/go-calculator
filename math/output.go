@@ -2,15 +2,19 @@ package math
 
 import "errors"
 
-func Add(num1 int, num2 int) int {
+type Number interface {
+	int | int8 | int16 | int32 | int64 | uint | uint8 | uint16 | uint32 | uint64 | float32 | float64
+}
+
+func Add[number Number](num1 number, num2 number) number {
 	return num1 + num2
 }
 
-func Subtract(num1 int, num2 int) int {
+func Subtract[number Number](num1 number, num2 number) number {
 	return num1 - num2
 }
 
-func Multiply(num1 int, num2 int) int {
+func Multiply[number Number](num1 number, num2 number) number {
 	return num1 * num2
 }
 
@@ -21,9 +25,13 @@ func IntegerDivision(num1 int, num2 int) (int, int, error) {
 	return num1 / num2, num1 % num2, nil
 }
 
-func FloatDivision(num1 int, num2 int) (float64, error) {
+func FloatDivision[number Number](num1 number, num2 number) (number, error) {
 	if num2 == 0 {
-		return -1.0, errors.New("cannot divide by zero")
+		return 0, errors.New("cannot divide by zero")
 	}
-	return float64(num1) / float64(num2), nil
+	return num1 / num2, nil
+}
+
+func Modulo(num1 int, num2 int) int {
+	return num1 % num2
 }

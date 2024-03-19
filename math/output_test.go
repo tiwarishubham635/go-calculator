@@ -49,7 +49,7 @@ func TestFloatDivisionHappyCase(t *testing.T) {
 	num2 := 2
 	quo, err := FloatDivision(num1, num2)
 	assert.Nil(t, err)
-	assert.Equal(t, quo, 7.5)
+	assert.Equal(t, quo, 7)
 }
 
 func TestFloatDivisionSadCase(t *testing.T) {
@@ -57,5 +57,5 @@ func TestFloatDivisionSadCase(t *testing.T) {
 	num2 := 0
 	quo, err := FloatDivision(num1, num2)
 	assert.NotNil(t, err)
-	assert.Equal(t, quo, -1.0)
+	assert.Equal(t, quo, 0)
 }
