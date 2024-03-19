@@ -59,3 +59,10 @@ func TestFloatDivisionSadCase(t *testing.T) {
 	assert.NotNil(t, err)
 	assert.Equal(t, quo, 0)
 }
+
+func TestModulo(t *testing.T) {
+	num1 := 5
+	num2 := 3
+	mod := Modulo(num1, num2)
+	assert.Equal(t, mod, 2)
+}
