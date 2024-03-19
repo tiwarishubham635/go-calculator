@@ -26,18 +26,36 @@ func TestMultiply(t *testing.T) {
 	assert.Equal(t, prod, 28)
 }
 
-func TestDivisionHappyCase(t *testing.T) {
-	num1 := 14
+func TestIntegerDivisionHappyCase(t *testing.T) {
+	num1 := 15
 	num2 := 2
-	quo, err := Divide(num1, num2)
+	quo, rem, err := IntegerDivision(num1, num2)
 	assert.Nil(t, err)
+	assert.Equal(t, rem, 1)
 	assert.Equal(t, quo, 7)
 }
 
-func TestDivisionSadCase(t *testing.T) {
+func TestIntegerDivisionSadCase(t *testing.T) {
 	num1 := 4
 	num2 := 0
-	quo, err := Divide(num1, num2)
+	quo, rem, err := IntegerDivision(num1, num2)
 	assert.NotNil(t, err)
+	assert.Equal(t, rem, -1)
 	assert.Equal(t, quo, -1)
+}
+
+func TestFloatDivisionHappyCase(t *testing.T) {
+	num1 := 15
+	num2 := 2
+	quo, err := FloatDivision(num1, num2)
+	assert.Nil(t, err)
+	assert.Equal(t, quo, 7.5)
+}
+
+func TestFloatDivisionSadCase(t *testing.T) {
+	num1 := 4
+	num2 := 0
+	quo, err := FloatDivision(num1, num2)
+	assert.NotNil(t, err)
+	assert.Equal(t, quo, -1.0)
 }
