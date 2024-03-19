@@ -1,7 +1,8 @@
-package main
+package math_test
 
 import (
 	"github.com/stretchr/testify/assert"
+	"github.com/tiwarishubham635/go-calculator/math"
 	"testing"
 )
 
