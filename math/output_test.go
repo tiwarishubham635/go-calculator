@@ -2,7 +2,6 @@ package main
 
 import (
 	"github.com/stretchr/testify/assert"
-	"github.com/tiwarishubham635/math"
 	"testing"
 )
 
