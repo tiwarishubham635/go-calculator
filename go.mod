@@ -12,5 +12,4 @@ require (
 
 retract (
     v2.0.1 // Published accidentally.
-    v2.0.2 // Contains retractions only.
 )
